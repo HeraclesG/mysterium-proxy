@@ -23,7 +23,7 @@ export class NodeClient {
         await this.cancelConnection();
 
         const proposals = await this.api.findProposals(proposalQuery(country));
-        log(`found ${proposals} proposals for ${country}`);
+        // log(`found ${proposals} proposals for ${country}`);
         for (const { providerId } of proposals) {
             log(`connecting to ${country}... (proxyPort: ${this.identity})`);
             try {

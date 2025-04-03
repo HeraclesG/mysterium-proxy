@@ -12,7 +12,7 @@ const proxy = httpProxy.createProxyServer({});
 const server = http.createServer(async (req, res) => {
     // Extract host and port from the request
     const host = req.headers.host; // e.g., "example.com:80"
-    const target = `http://${host}`; // Construct target URL
+    const target = `http://localhost:3001`; // Construct target URL
     console.log('Request Method:', req.method);
     console.log('Request Headers:', req.headers);
     proxy.web(req, res, { target: target, changeOrigin: false }, (error: any) => {
@@ -23,7 +23,7 @@ const server = http.createServer(async (req, res) => {
 });
 
 // Listen on a specific port
-const PORT = 3001; // Change to your desired port
+const PORT = 3000; // Change to your desired port
 server.listen(PORT, () => {
     console.log(`Proxy server is running on http://localhost:${PORT}`);
 });
