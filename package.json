@@ -19,6 +19,7 @@
     "typescript": "^4.6.2"
   },
   "devDependencies": {
-    "@types/http-proxy": "^1.17.16"
+    "@types/http-proxy": "^1.17.16",
+    "fs": "^0.0.1-security"
   }
 }
